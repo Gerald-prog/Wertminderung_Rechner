@@ -36,7 +36,7 @@ def parse_float(value: str) -> float:
         return 0.0
 
 
-col1, col2 = st.columns([1, 1])
+col1, col2 = st.columns([1, 2])
 
 with col1:
     st.header("reine Wertminderung")
