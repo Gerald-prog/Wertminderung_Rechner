@@ -45,7 +45,9 @@ with col1:
         "Anschaffungswert (€):", placeholder="z.B. 1000,00"
     )
 
-    anschaffungswert = parse_float(anschaffungswert_input)
+    anschaffungswert = (
+        parse_float(anschaffungswert_input) if anschaffungswert_input else 0.0
+    )
     prozent_liste = list(range(5, 55, 5))  # 5, 10, 15, ..., 50
     wertminderungs_prozent = st.selectbox(
         "Prozentuale Wertminderung (%):", prozent_liste
